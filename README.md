@@ -16,7 +16,7 @@ npm install morgan
 npm install cors
 ```
 
-3. Create index.js file entrypoint that will start running your server. Include below code for express requests:
+3. Create `index.js` file entrypoint that will start running your server. Include below code for express requests:
 ```js
 const express = require("express")
 const morgan = require("morgan")
@@ -43,9 +43,9 @@ app.listen(port, () => {
 })
 ```
 
-4. There is a user.js file inside src/routers which has your modular router for users, theres is also a data.js.
+4. There is a `user.js` file inside `src/routers` which has your modular router for users, theres is also a `data.js` file.
 
-5. Update package.json "scripts" with the following:
+5. Update `package.json` "scripts" with the following:
 ```js
 "scripts": {
    "start" : "nodemon index.js"
@@ -57,17 +57,17 @@ app.listen(port, () => {
 ## To make http requests install either:
 - [Insomnia](https://insomnia.rest/download)
 - [Postman](https://www.postman.com/downloads/)
-- use the url's suggested in the index.js code above.
+- use the url's suggested in the `index.js` code above.
 
 ## Set up Elepehant SQL
 - [elephant sql](https://www.elephantsql.com/)
 - more info here [elephant sql exercise](https://github.com/boolean-uk/api-express-database)
 
-## Prisma setup with Elephant SQL
+## Prisma setup
 1. install prisma `npm install prisma typescript ts-node @types/node --save-dev`
-2. initialise prisma `npx primsa init` this will give you a `prisma folder` inside here is `schema.prisma` file you can add models there.
+2. initialise prisma `npx primsa init` this will give you a `prisma` folder inside here is `schema.prisma` file you can add models there.
 see [prisma docs](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-typescript-postgres)
-3. inside`prisma folder` add a `seed.js` file and add the following code: 
+3. inside`prisma` folder add a `seed.js` file and add the following code: 
 ```js
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
